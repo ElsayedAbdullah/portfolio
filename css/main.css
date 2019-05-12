@@ -364,9 +364,6 @@ main#home h1 {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
-      grid-template-areas: "job1 job2 job3";
-  -ms-grid-columns: 2fr 1fr 2fr;
-      grid-template-columns: 2fr 1fr 2fr;
 }
 
 @media (max-width: 767px) {
@@ -374,6 +371,22 @@ main#home h1 {
         grid-template-areas: "job1" "job2" "job3";
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  #about .jobs {
+        grid-template-areas: "job1 job1 job2" "job3 job3 job3";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  #about .jobs {
+        grid-template-areas: "job1 job2 job3";
+    -ms-grid-columns: 2fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 2fr;
   }
 }
 
@@ -385,20 +398,14 @@ main#home h1 {
 }
 
 #about .jobs .job1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: job1;
 }
 
 #about .jobs .job2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: job2;
 }
 
 #about .jobs .job3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: job3;
 }
 
@@ -409,7 +416,7 @@ main#home h1 {
       grid-template-areas: "item";
 }
 
-@media (max-width: 991px) {
+@media (min-width: 768px) {
   #work .projects {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
