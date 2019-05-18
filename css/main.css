@@ -174,8 +174,8 @@
 }
 
 .portrait {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   background-image: url(../imgs/01.jpg);
   border: 3px solid #eece1a;
@@ -285,6 +285,7 @@ main {
         -ms-flex-align: center;
             align-items: center;
     line-height: 1.3;
+    padding: 0 3rem;
   }
 }
 
@@ -312,10 +313,24 @@ main#home h1 {
   main#home h1 {
     margin-bottom: 1rem;
     margin-top: 25vh;
+    font-size: 3.5rem;
+    letter-spacing: 0;
   }
 }
 
 /* End Main */
+@media (max-width: 767px) {
+  #about .lg-heading {
+    font-size: 3.5rem;
+    padding-top: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  #about .sm-heading {
+    margin-bottom: 1.5rem;
+  }
+}
+
 #about .about-info {
   display: -ms-grid;
   display: grid;
@@ -333,6 +348,9 @@ main#home h1 {
         grid-template-areas: "bio-image" "bio";
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  #about .about-info .bio-image {
+    display: none;
   }
 }
 
@@ -357,6 +375,7 @@ main#home h1 {
 #about .about-info .bio p {
   font-size: 20px;
   line-height: 1.7;
+  text-align: justify;
 }
 
 #about .jobs {
@@ -397,6 +416,30 @@ main#home h1 {
   line-height: 1.8;
 }
 
+#about .jobs .job:last-child {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  #about .jobs .job {
+    text-align: left;
+  }
+  #about .jobs .job h4 {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  #about .jobs .job h4:after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    background-color: #ddd;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 #about .jobs .job1 {
   grid-area: job1;
 }
@@ -407,6 +450,18 @@ main#home h1 {
 
 #about .jobs .job3 {
   grid-area: job3;
+}
+
+@media (max-width: 767px) {
+  #work .lg-heading {
+    font-size: 3.5rem;
+    padding-top: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  #work .sm-heading {
+    margin-bottom: 1.5rem;
+  }
 }
 
 #work .projects {
@@ -444,16 +499,20 @@ main#home h1 {
   }
 }
 
+#work .projects .item:last-child {
+  margin-bottom: 1rem;
+}
+
 #work .projects .item img {
   max-width: 100%;
-  border: 3px solid #fff;
+  border: 3px solid #eece1a;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
 #work .projects .item img:hover {
   opacity: 0.5;
-  border-color: #eece1a;
+  border-color: #000;
 }
 
 #work .projects .item .btn-light {
@@ -464,6 +523,18 @@ main#home h1 {
 #work .projects .item .btn-dark {
   background-color: black;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  #contact .lg-heading {
+    font-size: 3rem;
+    padding-top: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  #contact .sm-heading {
+    margin-bottom: 1.5rem;
+  }
 }
 
 #contact .boxes {
@@ -492,7 +563,7 @@ main#home h1 {
 
 @media (max-width: 767px) {
   #contact .boxes div {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem 1.5rem;
   }
 }
