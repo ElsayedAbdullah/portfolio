@@ -1,7 +1,7 @@
 .menu-btn {
   position: absolute;
   top: 35px;
-  right: 35px;
+  right: 15px;
   z-index: 3;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-out;
@@ -179,6 +179,8 @@
   border-radius: 50%;
   background-image: url(../imgs/01.jpg);
   border: 3px solid #eece1a;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 * {
@@ -589,3 +591,4 @@ footer {
 }
 
 /* End Footer */
+/*# sourceMappingURL=main.css.map */
